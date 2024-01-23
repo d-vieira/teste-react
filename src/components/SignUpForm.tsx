@@ -51,9 +51,9 @@ export default function SignUpForm({ handleImagePreview }: SignUpFormProps) {
           <FormItem>
             <FormControl>
               <Input
+                {...field}
                 className="dark:text-black/80 placeholder:text-black/60"
                 placeholder="Email"
-                {...field}
               />
             </FormControl>
           </FormItem>
@@ -67,9 +67,9 @@ export default function SignUpForm({ handleImagePreview }: SignUpFormProps) {
           <FormItem>
             <FormControl>
               <Input
+                {...field}
                 className="dark:text-black/80 placeholder:text-black/60"
                 placeholder="Nome de Usuário"
-                {...field}
               />
             </FormControl>
           </FormItem>
@@ -82,9 +82,9 @@ export default function SignUpForm({ handleImagePreview }: SignUpFormProps) {
           <FormItem>
             <FormControl>
               <Input
+                {...field}
                 className="dark:text-black/80 placeholder:text-black/60"
                 placeholder="Número de Telefone"
-                {...field}
               />
             </FormControl>
           </FormItem>
@@ -97,10 +97,10 @@ export default function SignUpForm({ handleImagePreview }: SignUpFormProps) {
           <FormItem>
             <FormControl>
               <Input
+                {...field}
                 type="password"
                 className="dark:text-black/80 placeholder:text-black/60"
                 placeholder="Senha"
-                {...field}
               />
             </FormControl>
           </FormItem>
