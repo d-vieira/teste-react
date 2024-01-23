@@ -8,7 +8,7 @@ export default function SignUp() {
   const [imagePreview, setImagePreview] = useState("");
 
   return (
-    <div className="flex border-2 rounded-lg w-[60%] p-6 mx-auto bg-gray-700">
+    <div className="flex border-2 rounded-lg w-[60%] p-6 mx-auto my-28 bg-gray-700">
       <div className="flex-[70%]">
         <h2 className="text-2xl py-4">Cadastre-se</h2>
         <div className="grid grid-cols-2 justify-evenly gap-4">
