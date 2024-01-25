@@ -16,7 +16,7 @@ export default function ProfileMenu() {
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
             <MenubarContent>
-              <Link href={"/login"}>
+              <Link href={"/logout"}>
                 <MenubarItem>Sair</MenubarItem>
               </Link>
             </MenubarContent>
