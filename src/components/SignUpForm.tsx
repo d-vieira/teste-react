@@ -3,7 +3,7 @@
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Form, FormControl, FormField, FormItem } from "./ui/form";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "./ui/form";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { ChangeEvent } from "react";
@@ -118,13 +118,16 @@ export default function SignUpForm({ handleImagePreview }: SignUpFormProps) {
                 hover:file:bg-zinc-50"
         onChange={handleFileChange}
       />
-
-      <Button
-        type="submit"
-        className="text-lg text-black/70 bg-emerald-400 hover:bg-emerald-950 hover:text-white"
-      >
-        Cadastrar Usuário
-      </Button>
+      <FormMessage>
+        <Button
+          disabled
+          type="submit"
+          className="text-lg text-black/70 bg-emerald-400 hover:bg-emerald-950 hover:text-white"
+        >
+          Cadastrar Usuário
+        </Button>
+        Temporariamente desativado, tente fazer login diretamente.
+      </FormMessage>
     </Form>
   );
 }
