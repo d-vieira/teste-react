@@ -19,7 +19,7 @@ import {
 } from "./assets/localStorage";
 
 type RegisterClienteForm = {
-  defaultValues: CustomerValues;
+  defaultValues?: CustomerValues;
   edit?: number | undefined;
 };
 
