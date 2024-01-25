@@ -3,7 +3,9 @@
 
 Sinta-se a vontade para revisar o código, todo feedback é sempre bem vindo!
 
-Para rodar o projeto localmente, basta seguir as instruções abaixo.
+Você pode vê-lo publicado [aqui](https://teste-react-eta.vercel.app/) <<<
+
+OU se preferir roda-lo localmente, basta seguir as instruções abaixo.
 
 ## Rodando localmente
 
