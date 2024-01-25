@@ -12,7 +12,16 @@ import AddressesForm from "./AddressesForm";
 import { useState } from "react";
 import ContactsForm from "./ContactsForm";
 import PersonalDataForm from "./PersonalDataForm";
-import { addCustomerOnLs } from "./assets/localStorage";
+import {
+  CustomerValues,
+  addCustomerOnLs,
+  updateCustomerOnLs,
+} from "./assets/localStorage";
+
+type RegisterClienteForm = {
+  defaultValues: CustomerValues;
+  edit?: number | undefined;
+};
 
 const registerClientSchema = z.object({
   personalData: z.object({
@@ -72,7 +81,8 @@ const customerDefaultData = {
 
 export default function RegisterClienteForm({
   defaultValues = customerDefaultData,
-}) {
+  edit,
+}: RegisterClienteForm) {
   const form = useForm<z.infer<typeof registerClientSchema>>({
     resolver: zodResolver(registerClientSchema),
     defaultValues,
@@ -90,14 +100,18 @@ export default function RegisterClienteForm({
   }
 
   function onSubmit(values: z.infer<typeof registerClientSchema>) {
-    addCustomerOnLs(values);
+    typeof edit === "number"
+      ? updateCustomerOnLs(values, edit)
+      : addCustomerOnLs(values);
   }
 
   return (
     <div className="border-2 rounded-lg mt-6 bg-gray-200 dark:bg-gray-700">
       <div className="flex">
         <h2 className="mx-auto mt-10 text-2xl font-extrabold">
-          Cadastrar Pessoa Física
+          {typeof edit === "number"
+            ? "Editar Dados de Pessoa Física"
+            : "Cadastrar Pessoa Física"}
         </h2>
       </div>
       <Form {...form}>
