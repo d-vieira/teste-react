@@ -58,3 +58,9 @@ export const remCustomerFromLs = (index: number) => {
   const result = previousCustomers.toSpliced(index, 1);
   localStorage.setItem("Customers", JSON.stringify(result));
 };
+
+export const updateCustomerOnLs = (data: CustomerValues, index: number) => {
+  const previousCustomers = getCustomerFromLS();
+  previousCustomers[index] = data;
+  localStorage.setItem("Customers", JSON.stringify(previousCustomers));
+};
